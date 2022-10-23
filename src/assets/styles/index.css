@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;  
+    color: theme('colors.black');
+    font-family: theme('fontFamily.main');
+    font-size: theme('spacing.main');
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .wrap {
+    @apply w-full h-screen flex-center
+  }
+
+  .inner {
+    @apply flex-center flex-col max-w-[800px] w-full px-[16px] xs:max-w-[350px]
+  }
+
+  .form {
+    @apply flex-center gap-main xs:flex-col w-full mb-[100px] xs:mb-[40px]
+  }
+
+  .input {
+    @apply bg-white outline-none xs:text-[16px] xs:p-[16px] xs:max-w-none;
+    border: 3px solid theme('colors.black');
+    padding: theme('spacing.main');
+    box-shadow: theme('boxShadow.block');
+    border-radius: theme('spacing.main');
+    font-family: theme('fontFamily.main');
+  }
+
+  .quantity {
+    @apply text-center mt-main text-[40px] font-bold xs:text-[30px]
+  }
+
+}
